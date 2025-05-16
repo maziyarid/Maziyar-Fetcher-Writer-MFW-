@@ -39,8 +39,7 @@ class PluginInitializer {
         add_action('admin_init', [$this, 'register_settings']);
         add_action('admin_menu', [$this, 'register_admin_menu']);
         add_action('admin_enqueue_scripts', [$this, 'enqueue_admin_assets']);
-        add_action('wp_enqueue_scripts', [$this, 'enqueue_frontend_assets']);
-
+        
         // Initialize components
         $this->initialize_components();
         $this->register_api_endpoints();
@@ -161,7 +160,7 @@ class PluginInitializer {
             'manage_options',
             'mfw-ai',
             [$this->admin_interface, 'render_main_page'],
-            'dashicons-artificial-intelligence',
+            'dashicons-text-page',
             20
         );
 
@@ -179,6 +178,13 @@ class PluginInitializer {
      * Enqueue admin assets
      */
     public function enqueue_admin_assets() {
+        $current_screen = get_current_screen();
+        
+        // Only load on plugin pages
+        if (!strpos($current_screen->id, 'mfw')) {
+            return;
+        }
+
         wp_enqueue_style(
             'mfw-admin',
             MFW_PLUGIN_URL . 'assets/css/mfw-admin.css',
@@ -280,5 +286,35 @@ class PluginInitializer {
      */
     private function cleanup_temp_data() {
         // Add your cleanup code here
+    }
+
+    /**
+     * Check API permission
+     */
+    public function check_api_permission() {
+        return current_user_can('manage_options');
+    }
+
+    /**
+     * Handle generate request
+     */
+    public function handle_generate_request($request) {
+        // Implementation for handling API requests
+        return new \WP_REST_Response(['status' => 'success']);
+    }
+
+    /**
+     * Render API settings section
+     */
+    public function render_api_settings_section() {
+        echo '<p>' . __('Configure your API settings below.', 'mfw') . '</p>';
+    }
+
+    /**
+     * Render API key field
+     */
+    public function render_api_key_field() {
+        $api_key = get_option('mfw_api_key', '');
+        echo '<input type="text" name="mfw_api_key" value="' . esc_attr($api_key) . '" class="regular-text">';
     }
 }
