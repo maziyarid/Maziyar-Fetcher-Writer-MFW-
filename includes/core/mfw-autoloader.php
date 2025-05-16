@@ -9,12 +9,23 @@ class Autoloader {
      * Register the autoloader
      */
     public static function register() {
-        // Set up plugin directories
-        self::$plugin_dir = plugin_dir_path(dirname(dirname(__FILE__)));
-        self::$includes_dir = self::$plugin_dir . 'includes/';
+        try {
+            // Set up plugin directories
+            self::$plugin_dir = plugin_dir_path(dirname(dirname(__FILE__)));
+            self::$includes_dir = self::$plugin_dir . 'includes/';
 
-        // Register autoloader
-        spl_autoload_register([__CLASS__, 'autoload']);
+            // Verify directories exist
+            if (!is_dir(self::$plugin_dir) || !is_dir(self::$includes_dir)) {
+                throw new \Exception('Plugin directories not found');
+            }
+
+            // Register autoloader
+            spl_autoload_register([__CLASS__, 'autoload']);
+            
+        } catch (\Exception $e) {
+            error_log(sprintf('[MFW Autoloader Error] Registration failed: %s', $e->getMessage()));
+            throw $e;
+        }
     }
 
     /**
@@ -24,12 +35,12 @@ class Autoloader {
      * @return void
      */
     public static function autoload($class) {
-        // Only handle our namespace
-        if (strpos($class, 'MFW\\') !== 0) {
-            return;
-        }
-
         try {
+            // Only handle our namespace
+            if (strpos($class, 'MFW\\') !== 0) {
+                return;
+            }
+
             // Remove namespace prefix
             $relative_class = substr($class, strlen('MFW\\'));
 
@@ -56,20 +67,20 @@ class Autoloader {
                 
                 // Verify the class was loaded
                 if (!class_exists($class, false)) {
-                    self::log_error('File loaded but class not found: ' . $class);
+                    throw new \Exception("File loaded but class not found: $class");
                 }
             } else {
-                self::log_error('File not found: ' . $file_path);
+                throw new \Exception("File not found: $file_path");
             }
+
         } catch (\Exception $e) {
-            self::log_error('Autoloader error: ' . $e->getMessage());
+            self::log_error($e->getMessage());
+            throw $e;
         }
     }
 
     /**
      * Log debug message
-     *
-     * @param string $message
      */
     private static function log_debug($message) {
         if (defined('WP_DEBUG') && WP_DEBUG) {
@@ -79,28 +90,8 @@ class Autoloader {
 
     /**
      * Log error message
-     *
-     * @param string $message
      */
     private static function log_error($message) {
         error_log('[MFW Autoloader Error] ' . $message);
-    }
-
-    /**
-     * Get plugin directory path
-     *
-     * @return string
-     */
-    public static function get_plugin_dir() {
-        return self::$plugin_dir;
-    }
-
-    /**
-     * Get includes directory path
-     *
-     * @return string
-     */
-    public static function get_includes_dir() {
-        return self::$includes_dir;
     }
 }
