@@ -1,0 +1,336 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Modern Framework for WordPress AI 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/maziyarid/mfw/issues\n"
+"POT-Creation-Date: 2025-05-15 10:10:40+00:00\n"
+"PO-Revision-Date: 2025-05-15 13:55+0330\n"
+"Last-Translator: Maziyar <info@maziyar.ir>\n"
+"Language-Team: Persian\n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.2\n"
+
+#: includes/admin/mfw-admin.php:100
+msgid "MFW Settings"
+msgstr "تنظیمات MFW"
+
+#: includes/admin/mfw-admin.php:101
+msgid "Settings"
+msgstr "تنظیمات"
+
+#: includes/admin/pages/mfw-admin-dashboard.php:25
+msgid "Dashboard"
+msgstr "داشبورد"
+
+#: includes/admin/pages/mfw-admin-dashboard.php:45
+msgid "Welcome to MFW"
+msgstr "به MFW خوش آمدید"
+
+#: includes/admin/pages/mfw-admin-settings.php:30
+msgid "API Settings"
+msgstr "تنظیمات API"
+
+#: includes/admin/pages/mfw-admin-settings.php:35
+msgid "API Key"
+msgstr "کلید API"
+
+#: includes/admin/pages/mfw-admin-settings.php:42
+msgid "Model Selection"
+msgstr "انتخاب مدل"
+
+#: includes/admin/pages/mfw-admin-settings.php:50
+msgid "Cache Settings"
+msgstr "تنظیمات کش"
+
+#: includes/admin/pages/mfw-admin-settings.php:55
+msgid "Enable Caching"
+msgstr "فعال‌سازی کش"
+
+#: includes/admin/pages/mfw-admin-settings.php:60
+msgid "Cache Expiration"
+msgstr "زمان انقضای کش"
+
+#: includes/admin/pages/mfw-admin-analytics.php:25
+msgid "Analytics"
+msgstr "تحلیل‌ها"
+
+#: includes/admin/pages/mfw-admin-analytics.php:40
+msgid "Content Generation Stats"
+msgstr "آمار تولید محتوا"
+
+#: includes/admin/pages/mfw-admin-logs.php:25
+msgid "System Logs"
+msgstr "گزارش‌های سیستم"
+
+#: includes/admin/pages/mfw-admin-tools.php:25
+msgid "Tools"
+msgstr "ابزارها"
+
+#: includes/admin/pages/mfw-admin-tools.php:40
+msgid "Import/Export"
+msgstr "درون‌ریزی/برون‌ریزی"
+
+#: includes/admin/pages/mfw-admin-tools.php:45
+msgid "System Status"
+msgstr ""
+
+#: includes/core/mfw-admin-interface.php:75
+msgid "Save Changes"
+msgstr "ذخیره تغییرات"
+
+#: includes/core/mfw-admin-interface.php:85
+msgid "Changes saved successfully"
+msgstr "تغییرات با موفقیت ذخیره شد"
+
+#: includes/core/mfw-admin-interface.php:95
+msgid "Error saving changes"
+msgstr "خطا در ذخیره تغییرات"
+
+#: includes/ai/mfw-ai-service.php:50
+msgid "Processing request"
+msgstr "در حال پردازش درخواست"
+
+#: includes/ai/mfw-ai-service.php:60
+msgid "Request completed"
+msgstr "درخواست تکمیل شد"
+
+#: includes/ai/mfw-ai-service.php:70
+msgid "Error processing request"
+msgstr "خطا در پردازش درخواست"
+
+#: includes/views/admin/settings.php:20
+msgid "General Settings"
+msgstr "تنظیمات عمومی"
+
+#: includes/views/admin/settings.php:25
+msgid "Language"
+msgstr "زبان"
+
+#: includes/views/admin/settings.php:30
+msgid "Theme"
+msgstr "پوسته"
+
+#: includes/views/admin/settings.php:35
+msgid "Timezone"
+msgstr "منطقه زمانی"
+
+#: includes/views/admin/analytics.php:20
+msgid "Usage Statistics"
+msgstr "آمار استفاده"
+
+#: includes/views/admin/analytics.php:25
+msgid "API Calls"
+msgstr "فراخوانی‌های API"
+
+#: includes/views/admin/analytics.php:30
+msgid "Content Generated"
+msgstr "محتوای تولید شده"
+
+#: includes/views/admin/analytics.php:35
+msgid "Error Rate"
+msgstr "نرخ خطا"
+
+#: includes/views/admin/tools.php:20
+msgid "Maintenance"
+msgstr "نگهداری"
+
+#: includes/views/admin/tools.php:25
+msgid "Clear Cache"
+msgstr "پاک کردن کش"
+
+#: includes/views/admin/tools.php:30
+msgid "Export Settings"
+msgstr "برون‌ریزی تنظیمات"
+
+#: includes/views/admin/tools.php:35
+msgid "Import Settings"
+msgstr "درون‌ریزی تنظیمات"
+
+#: includes/views/admin/dashboard.php:30
+msgid "Quick Stats"
+msgstr "آمار سریع"
+
+#: includes/views/admin/dashboard.php:35
+msgid "Recent Activity"
+msgstr "فعالیت‌های اخیر"
+
+#: includes/views/admin/dashboard.php:40
+msgid "System Status"
+msgstr "وضعیت سیستم"
+
+# Form Fields
+msgid "Title"
+msgstr "عنوان"
+
+msgid "Description"
+msgstr "توضیحات"
+
+msgid "Content"
+msgstr "محتوا"
+
+msgid "Keywords"
+msgstr "کلمات کلیدی"
+
+msgid "Category"
+msgstr "دسته‌بندی"
+
+msgid "Tags"
+msgstr "برچسب‌ها"
+
+msgid "Status"
+msgstr "وضعیت"
+
+msgid "Date"
+msgstr "تاریخ"
+
+msgid "Author"
+msgstr "نویسنده"
+
+# Messages
+msgid "Success"
+msgstr "موفق"
+
+msgid "Error"
+msgstr "خطا"
+
+msgid "Warning"
+msgstr "هشدار"
+
+msgid "Info"
+msgstr "اطلاعات"
+
+msgid "Loading"
+msgstr "در حال بارگذاری"
+
+msgid "Processing"
+msgstr "در حال پردازش"
+
+msgid "Completed"
+msgstr "تکمیل شد"
+
+msgid "Failed"
+msgstr "ناموفق"
+
+msgid "Not Found"
+msgstr "یافت نشد"
+
+# Buttons
+msgid "Add New"
+msgstr "افزودن جدید"
+
+msgid "Edit"
+msgstr "ویرایش"
+
+msgid "Delete"
+msgstr "حذف"
+
+msgid "Save"
+msgstr "ذخیره"
+
+msgid "Cancel"
+msgstr "انصراف"
+
+msgid "Update"
+msgstr "به‌روزرسانی"
+
+msgid "Generate"
+msgstr "تولید"
+
+msgid "Preview"
+msgstr "پیش‌نمایش"
+
+# AI Related
+msgid "AI Model"
+msgstr "مدل هوش مصنوعی"
+
+msgid "Temperature"
+msgstr "دما"
+
+msgid "Max Tokens"
+msgstr "حداکثر توکن‌ها"
+
+msgid "Prompt"
+msgstr "پرامپت"
+
+msgid "Response"
+msgstr "پاسخ"
+
+msgid "Generation Settings"
+msgstr "تنظیمات تولید"
+
+msgid "Content Type"
+msgstr "نوع محتوا"
+
+msgid "Content Length"
+msgstr "طول محتوا"
+
+msgid "Content Tone"
+msgstr "لحن محتوا"
+
+# Settings Categories
+msgid "API Configuration"
+msgstr "پیکربندی API"
+
+msgid "Content Settings"
+msgstr "تنظیمات محتوا"
+
+msgid "Performance Settings"
+msgstr "تنظیمات عملکرد"
+
+msgid "Security Settings"
+msgstr "تنظیمات امنیتی"
+
+msgid "Integration Settings"
+msgstr "تنظیمات یکپارچه‌سازی"
+
+# Error Messages
+msgid "Invalid API key"
+msgstr "کلید API نامعتبر"
+
+msgid "Request failed"
+msgstr "درخواست ناموفق"
+
+msgid "Rate limit exceeded"
+msgstr "محدودیت نرخ فراتر رفته است"
+
+msgid "Invalid request"
+msgstr "درخواست نامعتبر"
+
+msgid "Server error"
+msgstr "خطای سرور"
+
+msgid "Network error"
+msgstr "خطای شبکه"
+
+# Notifications
+msgid "Settings saved successfully"
+msgstr "تنظیمات با موفقیت ذخیره شد"
+
+msgid "Cache cleared successfully"
+msgstr "کش با موفقیت پاک شد"
+
+msgid "Export completed"
+msgstr "برون‌ریزی تکمیل شد"
+
+msgid "Import completed"
+msgstr "درون‌ریزی تکمیل شد"
+
+msgid "Operation failed"
+msgstr "عملیات ناموفق بود"
+
+# Help Text
+msgid "Enter your API key here"
+msgstr "کلید API خود را اینجا وارد کنید"
+
+msgid "Select your preferred model"
+msgstr "مدل مورد نظر خود را انتخاب کنید"
+
+msgid "Configure caching options"
+msgstr "گزینه‌های کش را پیکربندی کنید"
+
+msgid "Adjust rate limiting"
+msgstr "محدودیت نرخ را تنظیم کنید"
+

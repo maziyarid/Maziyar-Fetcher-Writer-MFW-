@@ -1,0 +1,23 @@
+# Copyright (C) 2025 maziyarid
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Modern Framework for WordPress AI 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/maziyarid/mfw/issues\n"
+"POT-Creation-Date: 2025-05-15 09:44:52+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: includes/admin/class-mfw-admin.php:100
+msgid "MFW Settings"
+msgstr ""
+
+#: includes/admin/class-mfw-admin.php:101
+msgid "Settings"
+msgstr ""
+
+[... Additional translation strings ...]

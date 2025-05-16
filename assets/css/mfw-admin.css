@@ -1,0 +1,200 @@
+/**
+ * MFW Admin Styles
+ * Styles for the admin interface components
+ */
+
+/* Admin Layout */
+.mfw-admin {
+    margin: 20px;
+    max-width: 1200px;
+}
+
+.mfw-admin-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+}
+
+.mfw-admin-content {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+}
+
+/* Tabs */
+.mfw-tabs {
+    margin-bottom: 20px;
+}
+
+.mfw-tab-nav {
+    display: flex;
+    border-bottom: 1px solid #ccd0d4;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mfw-tab-nav li {
+    margin: 0 4px -1px 0;
+}
+
+.mfw-tab-nav a {
+    display: block;
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    text-decoration: none;
+    color: #555;
+    background: #f1f1f1;
+}
+
+.mfw-tab-nav a.active {
+    background: #fff;
+    border-color: #ccd0d4;
+    border-bottom-color: #fff;
+}
+
+/* Forms */
+.mfw-form {
+    max-width: 800px;
+}
+
+.mfw-form-group {
+    margin-bottom: 20px;
+}
+
+.mfw-form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.mfw-form-group input[type="text"],
+.mfw-form-group input[type="number"],
+.mfw-form-group textarea,
+.mfw-form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.mfw-form-group textarea {
+    min-height: 150px;
+}
+
+/* Content Generation */
+.mfw-generator-form {
+    margin-bottom: 30px;
+}
+
+.mfw-result-container {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.mfw-content-preview {
+    position: relative;
+}
+
+.mfw-content-actions {
+    margin-bottom: 10px;
+}
+
+.mfw-content-body {
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Templates */
+.mfw-templates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.mfw-template-card {
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Analytics */
+.mfw-analytics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.mfw-analytics-card {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Utilities */
+.mfw-loader {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    animation: mfw-spin 1s linear infinite;
+}
+
+@keyframes mfw-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.mfw-error {
+    color: #dc3232;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.mfw-valid {
+    border-color: #46b450 !important;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 782px) {
+    .mfw-admin {
+        margin: 10px;
+    }
+
+    .mfw-tab-nav {
+        flex-direction: column;
+    }
+
+    .mfw-tab-nav li {
+        margin: 0 0 4px 0;
+    }
+
+    .mfw-tab-nav a {
+        border-radius: 4px;
+    }
+
+    .mfw-analytics-grid {
+        grid-template-columns: 1fr;
+    }
+}

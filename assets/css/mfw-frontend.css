@@ -1,0 +1,34 @@
+/**
+ * MFW Frontend Styles
+ */
+
+.mfw-content-container {
+    margin: 20px 0;
+    padding: 15px;
+}
+
+.mfw-generated-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.mfw-loading {
+    text-align: center;
+    padding: 20px;
+}
+
+.mfw-error {
+    color: #dc3232;
+    padding: 10px;
+    border-left: 4px solid #dc3232;
+    margin: 10px 0;
+}
+
+.mfw-success {
+    color: #46b450;
+    padding: 10px;
+    border-left: 4px solid #46b450;
+    margin: 10px 0;
+}
